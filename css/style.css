@@ -1,0 +1,708 @@
+
+/*
+  Theme Name: Creative HTML5 template
+  Author: ariyansolutions@gmail.com
+  Support: admin@gmail.com
+  Description: Creative HTML5 template for SEO.
+  Version: 1.0
+*/
+
+/* CSS Index
+-----------------------------------
+1. Theme default css
+2. header
+3. slider
+4. about-area
+5. features-box
+6. department
+7. team
+8. video-area
+9. counter
+10. footer
+*/
+
+
+
+/*
+==================================
+BASIC SETUP
+==================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ body {
+  font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*
+==================================
+REUSABLE COMPONENTS
+==================================
+*/
+.img {
+	max-width: 100%;
+	transition: all 0.3s ease-out 0s;
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.fix {
+	overflow: hidden
+}
+a {
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+  color: #000a2d;
+  display: inline-block;
+}
+a:hover {
+	text-decoration: none;
+	color: #5655ff;
+}
+a:focus,
+button:focus {
+	outline: 0;
+  text-decoration: none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus {
+	outline: 0
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Cabin', sans-serif;
+	font-weight: 700;
+	color: #194a80;
+	margin-top: 0px;
+	font-style: normal;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 36px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none;
+	display: inline-block;
+}
+p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.625;
+	color: #5d5d5d;
+	margin-bottom: 15px;
+}
+hr {
+	border-bottom: 1px solid #eceff8;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: #7e7e7e;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: #d6b161;
+	color: #fff;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+::selection {
+	background: #444;
+	color: #fff;
+	text-shadow: none;
+}
+*::-moz-placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: #555555;
+	font-size: 14px;
+	opacity: 1;
+}
+.theme-overlay {
+	position: relative
+}
+.theme-overlay::before {
+	background: #1696e7 none repeat scroll 0 0;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+/* button style */
+
+.btn {
+	-moz-user-select: none;
+	background: #5655ff none repeat scroll 0 0;
+	border-radius: 50px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 3.35;
+	margin-bottom: 0;
+	width: 210px;
+	height: 65px;
+	text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.btn:hover {
+  background: #4847fd;
+  color: #fff;
+}
+.breadcrumb > .active {
+	color: #888;
+}
+.owl-theme .owl-dots .owl-dot span {
+    transition: 0.3s;
+}
+.owl-theme .owl-dots .owl-dot:hover span {
+	background: #5655ff;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+    background: #5655ff;
+    width: 12px;
+    height: 12px;
+}
+/* scrollUp */
+#backTop {
+    background: #194a80;
+    height: 35px;
+    width: 35px;
+    right: 20px;
+    bottom: 20px;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    border-radius: 50%;
+    font-size: 23px;
+    line-height: 36px;
+    cursor: pointer;
+}
+#backTop:hover {
+	background: #5655ff;
+}
+.section-title > span {
+  color: #ff3d4f;
+  font-size: 14px;
+  margin-bottom: 25px;
+  display: block;
+}
+.section-title h2 {
+  color: #000a2d;
+  font-size: 70px;
+  margin-bottom: 0;
+}
+
+/*
+==================================
+HEADER SECTION
+==================================
+*/
+
+.header-area {
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+}
+.main-menu ul {
+	float: right;
+	display: -webkit-box;
+}
+.main-menu ul li {
+	padding: 22px 20px;
+}
+.main-menu ul li a {
+	padding: 10px 0;
+	color: #fff;
+	font-weight: 500;
+	transition: 0.3s;
+}
+.main-menu ul li a:hover {
+	color: #ededed;
+}
+/*
+==================================
+HERO SECTION
+==================================
+*/
+.hero-area {
+    padding-top: 187px;
+    padding-bottom: 100px;
+}
+.hero-area .bg-img {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 54.336%;
+    height: 800px;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+.hero-text {
+	margin-top: -40px;
+}
+.hero-text span {
+	font-size: 30px;
+	font-weight: 500;
+	color: #5655ff;
+	display: block;
+	margin-bottom: 10px;
+	font-family: 'Cabin', sans-serif;
+}
+.hero-text h2 {
+	color: #194a80;
+	font-size: 60px;
+	font-weight: 700;
+	margin-bottom: 35px;
+}
+.hero-text p {
+	margin-bottom: 40px;
+}
+.hero-img img {
+	margin-left: 100px;
+}
+/*
+==================================
+SERVICE SECTION
+==================================
+*/
+.section-title {
+	margin-bottom: 60px;
+}
+.section-title h3 {
+    margin-bottom: 20px;
+    line-height: 1.1111111111;
+}
+.section-title p {
+    padding: 0 70px;
+}
+.single-service {
+    border-radius: 3px;
+    background-color: rgb( 255, 255, 255 );
+    box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    position: relative;
+}
+.service-icon {
+	margin-bottom: 23px;
+}
+.service-icon i {
+    width: 80px;
+    height: 80px;
+    background: #5655ff;
+    border-radius: 50%;
+    font-size: 40px;
+    line-height: 2.1;
+    color: #fff;
+}
+.single-service a h4 {
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 20px;
+	transition: 0.3s;
+}
+.single-service a h4:hover {
+	color: #5655ff;
+}
+.single-service p {
+	margin-bottom: 0px;
+}
+.service-inner {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -30px;
+    transition: 0.3s;
+    opacity: 0;
+    text-align: center;
+}
+.service-inner a i {
+    width: 30px;
+    height: 30px;
+    background: #194a80;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.45;
+    transition: 0.3s;
+}
+.single-service:hover .service-inner, 
+.single-blog:hover .service-inner {
+	bottom: -15px;
+	opacity: 1;
+}
+.service-inner a i:hover {
+    background: #5655ff;
+}
+/*
+==================================
+ABOUT SECTION
+==================================
+*/
+.about-content h3 {
+    margin-bottom: 25px;
+		line-height: 1.1111111111;
+}
+.about-content > p {
+    margin-bottom: 50px;
+		line-height: 1.75;
+}
+.single-about-us {
+    margin-left: 25px;
+}
+.about-icon {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+.about-icon i {
+    font-size: 27px;
+    color: #5655ff;
+}
+.single-about-us p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.about-img img {
+    margin-left: 30px;
+}
+
+/*
+==================================
+TESTIMONIAL SECTION
+==================================
+*/
+.testimonil-content {
+	margin-top: 15px;
+}
+.single-client {
+    background-color: rgb( 255, 255, 255 );
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.1);
+    padding: 33px;
+    padding-top: 38px;
+    position: relative;
+    margin: 0 15px;
+}
+.single-client p {
+    margin-bottom: 17px;
+}
+.client-img {
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+}
+.client-img img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+.client-name-and-role h5 {
+    margin-bottom: 0;
+    padding-top: 2px;
+}
+.client-name-and-role p {
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+.Blockquote {
+    position: absolute;
+    top: -17px;
+    left: 20px;
+    opacity: 0.2;
+}
+
+
+
+
+/*
+==================================
+FAQ SECTION
+==================================
+*/
+.faq-area .card-header a:before {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f068";
+    position: absolute;
+    font-weight: 400;
+    right: 20px;
+}
+.faq-area .card-header a.collapsed:before {
+    content: "\f067";
+}
+.card {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 5px;
+}
+.card-header {
+    padding: 0; 
+    margin-bottom: 0; 
+    border-bottom: 0; 
+}
+.card-header a {
+    padding: 8px 20px;
+    background-color: #f2f2f2;
+    border-bottom: 0;
+    cursor: pointer;
+    display: block;
+}
+.card-header:first-child {
+    border-radius: 0;
+}
+.card-header h5 {
+    font-weight: 400;
+}
+.card-body {
+    background-color: #f2f2f2;
+    border-top: 1px solid #d8d8d8;
+    padding: 20px;
+    color: #5d5d5d;
+}
+.card-body p {
+    margin: 0;
+}
+
+/*
+==================================
+BLOG SECTION
+==================================
+*/
+.single-blog {
+    padding: 18px;
+		background-color: rgb( 255, 255, 255 );
+    box-shadow: 0 5px 30px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.single-blog .blog-label {
+    display: inline-block;
+    margin-right: 18px;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #fff;
+    background: #5655ff;
+    border-radius: 30px;
+    text-transform: capitalize;
+}
+.single-blog .blog-label i,
+.single-blog .blog-time i {
+    margin-right: 7px;
+}
+.single-blog .blog-time {
+    display: inline-block;
+    font-size: 14px;
+}
+.single-blog .blog-time h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.blog-text {
+    padding: 0 8px;
+}
+
+
+
+.contact-img img {
+    margin-left: -75px;
+}
+
+.contact-form form input {
+    width: 100%;
+    height: 55px;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #5d5d5d;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.contact-form textarea {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #5d5d5d;
+    padding: 15px;
+    border-radius: 3px;
+    margin-bottom: 22px;
+    transition: 0.3s;
+}
+.contact-form form input:focus,
+.contact-form textarea:focus {
+     border-color: #5655ff; 
+}
+
+
+
+
+
+
+
+.footer-area {
+	background: #eceff3;
+	padding-top: 100px;
+	padding-bottom: 30px;
+}
+.footer-logo {
+	margin-bottom: 25px;
+}
+.widget-text p {
+    margin-bottom: 10px;
+}
+
+.widget-index ul {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 0;
+}
+.widget-index ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 10px;
+    color: #5d5d5d;
+    display: block;
+}
+.widget-index ul li i {
+    position: absolute;
+    left: 0;
+    line-height: 22px;
+}
+.footer-link h4 {
+    font-size: 20px;
+    color: #5d5d5d;
+    margin-bottom: 42px;
+    line-height: 0.6;
+}
+.footer-link ul li {
+    display: block;
+    line-height: 30px;
+}
+.footer-link ul li a {
+	color: #5d5d5d;
+}
+.footer-link ul li a:hover {
+	text-decoration: underline;
+}
+.footer-social-link a {
+    width: 33px;
+    height: 33px;
+    background: #194a80;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    line-height: 2;
+    margin-right: 8px;
+}
+.footer-social-link a:hover {
+	background: #5655ff;
+}
+.subscribe-form {
+	position: relative;
+}
+.subscribe-form input {
+    width: 100%;
+    padding: 14px 20px;
+    padding-right: 50px;
+    border-radius: 30px;
+    border: none;
+    font-size: 15px;
+}
+.subscribe-form button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #194a80;
+    font-size: 27px;
+    line-height: 1.6;
+    color: #fff;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.subscribe-form button:hover {
+	background: #5655ff;
+}
+::-webkit-input-placeholder {
+  color: #5d5d5d;
+  font-size: 16px;
+}
+.copyright-area {
+    margin-top: 10px;
+    padding-top: 45px;
+    border-top: 1px solid #5d5d5d;
+}
+.footer-menu ul {
+    margin-right: -10px;
+}
+.footer-menu ul li {
+    padding: 0 10px;
+}
+
+
